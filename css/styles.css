@@ -428,13 +428,13 @@ img {
 }
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 .footer-form-label {
   display: block;
   margin-right: 24px;
 }
 .footer-form-desc {
-  display: block;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
