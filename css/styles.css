@@ -430,10 +430,7 @@ img {
   display: flex;
   gap: 24px;
 }
-.footer-form-label {
-  display: block;
-  margin-right: 24px;
-}
+
 .footer-form-desc {
   font-family: 'Roboto';
   font-style: normal;
@@ -455,9 +452,10 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-form-input::placeholder {
   font-family: 'Roboto';
@@ -469,7 +467,10 @@ img {
   color: #ffffff;
 }
 .footer-form-button {
-  font-family: 'Roboto';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -477,8 +478,9 @@ img {
   letter-spacing: 0.04em;
   color: #ffffff;
   background-color: var(--logo-fill-color);
-
-  padding: 8px 64px 8px 24px;
+  min-width: 165px;
+  cursor: pointer;
+  border: none;
   height: 40px;
   border-radius: 4px;
 }
@@ -486,9 +488,7 @@ img {
   position: relative;
 }
 .icon-footer-button {
-  position: absolute;
-  top: 8px;
-  right: 24px;
+  margin-left: 16px;
 }
 
 /*Portfolio*/
@@ -644,7 +644,11 @@ img {
 }
 .contact-form-field-wrapper {
   display: block;
-  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--icons-customers-color);
+  margin-bottom: 4px;
 }
 .contact-form-field-input {
   height: 40px;
@@ -652,6 +656,9 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-field-desc {
   display: block;
@@ -674,7 +681,6 @@ img {
   display: block;
 }
 .contact-form-field-input:focus {
-  outline: none;
   border-color: var(--logo-fill-color);
 }
 .contact-form-field-input:focus + .modal-input-icon {
@@ -683,16 +689,19 @@ img {
 .contact-form-message {
   width: 100%;
   height: 120px;
+  font-size: 12px;
   resize: none;
   padding: 8px 16px;
-  line-height: 1.4;
+  line-height: 1.17;
   letter-spacing: 0.04em;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
+  color: rgba(46, 47, 66, 0.4);
   transition: border-color var(--transition-duration-and-func);
+  background-color: transparent;
+  outline: transparent;
 }
 .contact-form-message:focus {
-  outline: none;
   border-color: var(--logo-fill-color);
 }
 .contact-form-message::placeholder {
@@ -707,14 +716,12 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
-  color: #8e8f99;
+  color: var(--icons-customers-color);
 }
 .modal-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 8px;
 }
 .modal-contact-form {
 }
@@ -736,9 +743,10 @@ img {
   appearance: none;
 }
 
-.contact-form-checkbox:checked + .contact-form-own-checkbox {
-  border: 1px solid #404bbf;
-  background-color: #404bbf;
+.icon-set-checkbox:checked + .contact-form-own-checkbox {
+  border: none;
+  background-color: var(--focus-nav-ccolor);
+  fill: var(--backround-white-color);
 }
 .name-of-modal {
   font-weight: 500;
@@ -770,6 +778,9 @@ img {
   background-color: var(--logo-fill-color);
   display: block;
   margin: auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
 
   height: 56px;
   border: none;
@@ -778,4 +789,25 @@ img {
 .contact-form-submit:hover,
 .contact-form-submit:focus {
   background-color: var(--focus-nav-ccolor);
+}
+.modal-texarea-div {
+  margin-bottom: 16px;
+}
+.check-box-div {
+  margin-bottom: 24px;
+}
+.icon-set-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.privacy-policy-desc {
+  color: #4d5ae5;
 }
