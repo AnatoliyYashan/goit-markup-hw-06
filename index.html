@@ -531,7 +531,7 @@
               />
             </label>
             <!--<div class="button-footer-icon-wrapper">-->
-            <button class="footer-form-button">
+            <button class="footer-form-button" type="submit">
               Subscribe<svg class="icon-footer-button" width="24" height="24">
                 <use href="./images/icons.svg#icon-telegram"></use>
               </svg>
@@ -569,11 +569,12 @@
             </div>
           </div>
           <div class="modal-fieldset">
-            <label class="contact-form-field-wrapper">
+            <label class="contact-form-field-wrapper" for="user-phone">
               <span class="contact-form-field-desc">Phone</span>
             </label>
             <div class="contact-form-input-wrapper">
               <input
+                id="user-phone"
                 class="contact-form-field-input"
                 type="tel"
                 name="user_tel"
@@ -588,11 +589,17 @@
           </div>
 
           <div class="modal-fieldset">
-            <label class="contact-form-field-wrapper">
+            <label class="contact-form-field-wrapper" for="user-email">
               <span class="contact-form-field-desc">Email</span>
             </label>
             <div class="contact-form-input-wrapper">
-              <input class="contact-form-field-input" type="email" name="email" required />
+              <input
+                id="user-email"
+                class="contact-form-field-input"
+                type="email"
+                name="email"
+                required
+              />
               <svg class="modal-input-icon" width="18" height="24" aria-label="email-icon">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
@@ -627,8 +634,9 @@
                   <use
                     class="contact-form-checkmark-icon"
                     href="./images/icons.svg#icon-Vector"
-                  ></use></svg
-              ></span>
+                  ></use>
+                </svg>
+              </span>
               <a class="privacy-policy-desc" href="">Privacy Policy</a>
             </label>
           </div>

@@ -743,7 +743,7 @@ img {
   appearance: none;
 }
 
-.icon-set-checkbox:checked + .contact-form-own-checkbox {
+.contact-form-checkbox:checked + .icon-set-checkbox {
   border: none;
   background-color: var(--focus-nav-ccolor);
   fill: var(--backround-white-color);
