@@ -97,6 +97,7 @@ img {
   padding-bottom: 24px;
 }
 .link-nav {
+  display: block;
   position: relative;
   font-style: normal;
   font-weight: 500;
@@ -675,6 +676,7 @@ img {
   left: 16px;
   transform: translateY(-50%);
   transition: fill var(--transition-duration-and-func);
+  fill: var(--background-color);
 }
 .contact-form-input-wrapper {
   position: relative;
@@ -687,6 +689,7 @@ img {
   fill: var(--logo-fill-color);
 }
 .contact-form-message {
+  display: block;
   width: 100%;
   height: 120px;
   font-size: 12px;
